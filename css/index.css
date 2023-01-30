@@ -235,14 +235,18 @@ flex-direction: column;
     padding: 0.9rem 2rem;
     border: 2px solid var(--Pale-Blue);
     border-radius: 5rem;
+    transition: 0.2s ease;
 }
 
 
 
-
+.email-input:hover{
+    background-color:hsl(223, 100%, 88%,40%);
+    opacity: 60%;
+}
 
 .email-input:focus{
-    background-color:var(--Pale-Blue);
+    background-color:hsl(223, 100%, 88%,50%);
     border: 2px solid var(--Pale-Blue);
     outline: 0px solid var(--Blue);
 }
