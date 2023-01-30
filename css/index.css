@@ -1,1 +1,517 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,600;0,700;1,300;1,600;1,700&display=swap');
+/*
+=============== 
+Variables
+===============
+*/
 
+:root {
+
+
+   /* Colors */
+
+/* ### Primary */
+
+--Blue: hsl(223, 87%, 63%);
+
+    /* ### Secondary */
+
+
+--Pale-Blue: hsl(223, 100%, 88%);
+--Light-Red: hsl(354, 100%, 66%);
+
+/* ### Neutral */
+
+--Gray: hsl(0, 0%, 59%);
+--Very-Dark-Blue: hsl(209, 33%, 12%);
+
+/* #references */
+
+--font-primary: 'Libre Franklin', sans-serif;
+
+/* - [Font Awesome](https://fontawesome.com)
+- [IcoMoon](https://icomoon.io)
+- [Ionicons](https://ionicons.com) */
+
+}
+
+/*
+=============== 
+
+*****************************
+*****************************
+Global Styles
+*****************************
+*****************************
+
+===============
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+   
+}
+
+
+
+body {
+    font-family: var(--font-primary);
+    font-size: 20px;
+    background-color: white;
+
+  
+    min-height: 100vh;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+main {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* 
+________________________
+________________________
+________________________
+{start} FONTS
+________________________
+________________________
+________________________*/
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+h1 {
+    font-size: 1.5rem;
+    color: var(--Gray);
+    font-weight: 300;
+    line-height: auto;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+ .headingwrap{
+    font-weight: 700;
+    color: var(--Very-Dark-Blue);
+    /* font-size: 2rem; */
+}
+
+
+
+
+p {
+    font-size: 0.9rem;
+
+    color: var(--txt-Dark-grayish-blue);
+}
+
+.copyright{
+    font-size: 0.7rem;
+    color: var(--Gray);
+}
+
+
+
+/* {end} FONTS ___________________*/
+
+
+/* 
+________________________
+________________________
+________________________
+{start} ELEMENTS
+________________________
+________________________
+________________________*/
+
+
+img {
+
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+   
+
+}
+
+svg {
+    /* width: 100%;
+    height:100%; */
+
+    height: 100%;
+    width: auto;
+    transition: var(--transition);
+}
+
+.logo{
+    width:4rem;
+    margin-bottom: 3rem;
+}
+
+
+.social-icon{
+
+    width:1.3rem;
+    height:1.3rem;
+    padding:1.2rem;
+    margin: 0rem 0.5rem;
+    
+    background-color: white;
+    color: var(--Blue);
+    display: flex;
+   
+    border: 1px solid var(--Pale-Blue);
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+}
+
+.social-icon:hover{
+
+  
+    
+    background-color:var(--Blue);
+    color: white;
+
+    border: 1px solid var(--Blue);
+   
+}
+
+
+/*INPUT AREAS*/
+
+.inputsgroup{
+width: 100%;
+display: flex;
+flex-direction: column;
+    justify-content:center;
+    align-items: stretch;
+}
+
+
+
+/* hide label */
+.email-label {
+    
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+
+.email-input{
+    color:var(--txt-Dark-grayish-blue);
+    padding: 0.9rem 2rem;
+    border: 2px solid var(--Pale-Blue);
+    border-radius: 5rem;
+}
+
+
+
+
+
+.email-input:focus{
+    background-color:var(--Pale-Blue);
+    border: 2px solid var(--Pale-Blue);
+    outline: 0px solid var(--Blue);
+}
+
+.email-input::placeholder{
+    color:var(--Pale-Blue);
+    font-size:0.9rem;  
+    font-weight: 300;
+  
+}
+
+/* error classes */
+.email-input-error{
+    color:var(--txt-Dark-grayish-blue);
+    padding: 1rem 2rem;
+    border: 2px solid var(--Light-Red);
+    border-radius: 5rem;
+}
+
+.email-input-error::placeholder{
+    color:var(--txt-Dark-grayish-blue);
+   
+  
+}
+
+.errorsubmission{
+    display:none;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--Light-Red);
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.displaynone-errorsubmission{
+    display: none;
+}
+
+/* BUTTON */
+.submit-button{
+    font-size: 0.9rem;   
+    font-weight: 600;
+  
+
+    background-color: var(--Blue);
+    color:white;
+    padding: 0.9rem 0rem;
+    margin: 1rem 0rem;
+    border: 1px solid var(--Blue);
+    border-radius: 5rem;
+
+    box-shadow: 0px 5px 20px -5px var(--Blue);
+    transition: 0.2s ease;
+
+}
+
+.submit-button:hover{
+     opacity: 0.70;
+
+}
+
+/* {end} ELEMENTS ___________________*/
+
+
+
+/*
+=============== 
+
+*****************************
+*****************************
+Custom Classes
+*****************************
+*****************************
+
+===============
+*/
+
+
+.card {
+    max-width: min(30rem, 100%);
+    margin: 2rem 2rem;
+    margin-bottom: 2rem;
+    
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+
+    padding: 0rem;
+padding-top: 5rem;
+    
+
+    
+}
+
+.headline{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 3rem;
+}
+
+.social-media{
+    width: 100%;
+    padding: 1rem 0rem;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 2rem;
+
+
+}
+
+.forma{
+    padding: 0rem 0rem;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: stretch;
+}
+
+.illustration{
+    margin-top:4rem;
+    margin-bottom:7rem;
+  
+ 
+}
+
+/* 
+________________________
+________________________
+________________________
+{start}  MEDIA QUERYS DESKTOP
+________________________
+________________________
+________________________*/
+
+
+@media screen and (min-width: 800px) {
+
+    /*FONTS*/
+    h1 {
+        font-size: 3rem;
+        color: var(--Gray);
+        font-weight: 300;
+        line-height: auto;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+     .headingwrap{
+        font-weight: 700;
+        color: var(--Very-Dark-Blue);
+        /* font-size: 2rem; */
+    }
+    
+    
+    
+    
+    p {
+        font-size: 1.3rem;
+    
+        color: var(--txt-Dark-grayish-blue);
+    }
+    
+
+    .logo{
+        width:5rem;
+        margin-bottom: 2rem;
+    }
+
+
+
+    /*MAIN ELEMENTS*/ 
+
+    .card {
+        max-width: min(45rem, 100%);
+        margin: 0rem 0rem;
+        margin-bottom: 1rem;
+        
+        width: 100%;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding: 2rem;
+        padding-top: 4rem;
+    }
+
+   
+
+    .headline{
+  
+        margin-bottom: 1rem;
+    }
+
+
+    .forma{
+    margin: 1.5rem 2rem;
+    margin-bottom: 4rem;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:flex-start;
+
+
+}
+
+.illustration{
+    margin-top: 0rem;
+    margin-bottom: 4rem;
+}
+
+.social-media{
+    width: 100%;
+    padding: 0rem 0rem;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+
+}
+
+
+
+/*INPUTS AREA*/ 
+
+.inputsgroup{
+    
+        justify-content:right;
+        align-items:flex-start;
+        height: 5rem;
+    }
+
+
+/*form elements*/ 
+.submit-button{
+    
+    padding: 1rem 0rem;
+    margin: 0rem 0rem;
+    margin-left: 1rem;
+   
+
+    width:50%;
+}
+
+.email-input{
+    padding: 1rem 2rem;
+    width: 100%;
+}
+
+.errorsubmission{
+   padding-left: 2rem;
+   padding-bottom: 0rem;
+   margin-bottom: 0rem;
+}
+
+
+}
