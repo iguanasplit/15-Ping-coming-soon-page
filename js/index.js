@@ -17,20 +17,31 @@ button.addEventListener('click', function () {
     console.log(email);
 
 
-    let element = document.querySelector('.forma');
+   
    let emailInput = document.querySelector('.email-input');
     let errorSubmission = document.querySelector(".errorsubmission");
+    let empty = document.querySelector(".empty");
 
     if (email) {
         emailInput.classList.remove("email-input-error");
         // alert("Hey there!");
      
         errorSubmission.style.display = "none";
-    } else {
+       
+        
+    } else if (emailInput.value.length == 0) {
 
         emailInput.classList.add("email-input-error");
         // alert("Hey there!");
-      
+
+        errorSubmission.style.display = "none";
+        empty.style.display = "block";}
+    
+  else if(!email && !emailInput.value.length == 0)  {
+
+        emailInput.classList.add("email-input-error");
+        // alert("Hey there!");
+      empty.style.display = "none";
         errorSubmission.style.display = "block";
     }
 
